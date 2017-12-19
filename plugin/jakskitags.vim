@@ -16,12 +16,12 @@ if !exists("g:jakskitags_dir")
 endif
 
 function! s:Generate()
-    if !isdirectory(s:tags_dir)
-        call mkdir(s:tags_dir)
+    if !isdirectory(g:jakskitags_dir)
+        call mkdir(g:jakskitags_dir)
     endif
     let tagfile = g:jakskitags_dir . "/" . sha256(getcwd())[:15]
     echo "Generating tags..."
-    :silent :call system("ctags -R -f " . tagfile . " .")
+    :silent :call system("ctags -R -f " . tagfile . " " . getcwd())
     if v:shell_error != 0
         echoerr "Failed to generate tags with code: " . v:shell_error
     else
