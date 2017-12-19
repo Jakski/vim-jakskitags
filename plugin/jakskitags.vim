@@ -30,7 +30,7 @@ function! s:Generate()
 endfunction
 
 function! jakskitags#setTagPath()
-    if &l:tags != &tags
+    if &l:tags == ""
         let &l:tags = &tags . "," . g:jakskitags_dir . "/" . 
                     \ sha256(getcwd())[:15]
     endif
