@@ -1,6 +1,6 @@
 " Vim JakskiTags plugin for tag managment
 " Author: Jakub Pieńkowski <rayunderwater@gmail.com>
-" Home: https://github.com/Rayvenden/JakskiTags
+" Home: https://github.com/Jakski/JakskiTags
 " License: MIT
 
 if exists("g:loaded_jakskitags")
